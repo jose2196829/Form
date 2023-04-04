@@ -4,9 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Formulario de Inscripción al curso</title>
 </head>
 <body>
-    
+    <div>
+        <h1 id="title">Inscripción en el Curso</h1>    
+        <p id="description">Cuantos más datos nos suministres, además de los obligatorios, más fácil nos será encontrar una plaza para tí.</p>
+        <form action="https://miServidor.com" method="post" id="survey-form">
+            <fieldset>
+                <h2 class="header" id="personal-data">Datos personales</h2>    
+                <label for="name-label" id="name-label">Nombre <input id="name" type="text" name="name" placeholder="Nombre de pila" required></label>
+                <label for="surname-label">Apellidos <input type="text" name="surname" placeholder="Escribe tus apellidos sin abreviaturas" id="surname" required></label>
+                <label for="employeeId-label">Código de Empleado <input type="text" name="employeeId" placeholder="En formato Mxxxxxx" id="employeeId" pattern="M[0-9]{6}"></label>
+                <label for="email-label" id="email-label">Email <input type="email" name="email" placeholder="xxxxxx@yyyyy.xxx" id="email" required></label>
+                <label for="length-of-service-label" id="number-label">Antigüedad <input type="number" name="length-of-service" placeholder="Un año de antigüedad mínimo" id="number" min="1" max="35"/></label>
+                <label for="workplace">Centro de Trabajo     
+                    <select name="workplace" id="dropdown">
+                        <option value="">Selecciona tu centro de trabajo</option>
+                        <option value="1">Granada</option>
+                        <option value="2">Málaga</option>
+                        <option value="3">La Carolina</option>
+                        <option value="4">Santander</option>
+                    </select>
+                </label>    
+            </fieldset>
+            <fieldset>
+                <h2 class="header" id="course-format">Formato del curso</h2>
+                <label for="presential"><input class="inline" type="radio" value="Presencial" name="course-format" id="presential">Presencial </label>
+                <label for="online"><input class="inline" type="radio" value="Online" name="course-format" id="online">Online </input></label>
+            </fieldset>
+            <fieldset>
+                <h2 class="header" id="courses">Cursos</h2>
+                <label for="courses"><input class="inline" id="courses" type="checkbox" name="courses" value="Excel">Excel </label>
+                <label for="courses"><input class="inline" id="courses" type="checkbox" name="courses" value="Formularios Google">Formularios Google </label>
+                <label for="courses"><input class="inline" id="courses" type="checkbox" name="courses" value="Ventas Online">Ventas Online </label>
+                <label for="courses"><input class="inline" id="courses" type="checkbox" name="courses" value="Redes Sociales">Redes Sociales </label>
+                <label for="courses"><input class="inline" id="courses" type="checkbox" name="courses" value="Control e higiene de la voz">Control e higiene de la voz </label>
+                <label for="courses"><input class="inline" id="courses" type="checkbox" name="courses" value="Atención técnica básica">Atención técnica básica </label>    
+            
+                <label for="observations" id="observations">Observaciones: 
+                    <textarea name="observations" id="observations" cols="30" rows="5" placeholder="Ayudanos a darte mejor servicio">
+                    </textarea>
+                </label>    
+            </fieldset>
+            <input type="submit" id="submit" value="Submit">
+        </form>
+    </div>    
 </body>
 </html>
